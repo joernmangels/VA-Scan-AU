@@ -1,0 +1,36 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="de.varelmann.varelmann_scan_au.controller.View3"
+	xmlns:html="http://www.w3.org/1999/xhtml" xmlns:semantic="sap.m.semantic">
+	<semantic:SemanticPage id="V1" navButtonPress="onNavBack" showNavButton="false" title="{i18n>appTitle}" floatingFooter="false"
+		showFooter="true">
+		<FlexBox width="100%" height="8%" alignItems="Start" justifyContent="Start">
+			<items>
+				<Title text="{i18n>view3-title}" level="H1" class="sapUiSmallMarginTop sapUiSmallMarginBegin sapUiSmallMarginBottom myBold"/>
+			</items>
+		</FlexBox>
+		<!--<ObjectStatus class="myBold" title="{global>/_ocr_result/initial_certificate/text}" state="Success"/>-->
+		<!--/////////////////////////////////////////////////////////////////////////////////////-->
+		<HeaderContainer id="NAV1" scrollStep="124" scrollTime="500" orientation="Vertical" width="100%" height="92%"></HeaderContainer>
+		<!--/////////////////////////////////////////////////////////////////////////////////////-->
+		<semantic:customFooterContent>
+			<HBox height="100%" width="100%">
+				<FlexBox width="100%" alignItems="Start" justifyContent="SpaceBetween">
+					<items>
+						<Button id="BACK" type="Reject" text="{i18n>view3-back}" icon="sap-icon://navigation-left-arrow" press="onNavBack"
+							visible="{global>/_w3_back}"/>
+						<Button id="EDIT" text="{i18n>view3-change}" icon="sap-icon://edit" press="onToggleChange"/>
+						<Button id="SAVE" text="{i18n>view3-save}" icon="sap-icon://save" press="onToggleChange" type="Emphasized" visible="false"/>
+						<!--<Button id="FORW" type="Accept" text="{i18n>view3-weiter}" icon="sap-icon://navigation-right-arrow" press="onNavToView3"-->
+						<!--	visible="{global>/_w3_validated}"/>-->
+						<Button id="MESSA" text="{i18n>view3-message}" icon="sap-icon://message-error" press="onMessagePress" type="Reject"
+							visible="{=${message>/}.length !== 0}"/>
+						<Button id="FORW" text="{i18n>view3-send}" icon="sap-icon://paper-plane" press="handleUPLB" visible="{global>/_w3_validated}"
+							type="Accept"/>
+					</items>
+				</FlexBox>
+			</HBox>
+		</semantic:customFooterContent>
+		<!--<semantic:messagesIndicator>-->
+		<!--<semantic:MessagesIndicator press="onMessagePopoverPress"/>-->
+		<!--</semantic:messagesIndicator>-->
+	</semantic:SemanticPage>
+</mvc:View>

@@ -1,0 +1,48 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m"
+	controllerName="de.varelmann.varelmann_scan_au.controller.View2" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:semantic="sap.m.semantic"
+	xmlns:l="sap.ui.layout">
+	<semantic:SemanticPage id="V1" navButtonPress="onNavBack" showNavButton="false" title="{i18n>appTitle}" showFooter="true"
+		floatingFooter="false">
+		<FlexBox width="100%" height="10%" alignItems="Start" justifyContent="Start">
+			<items>
+				<Title text="{i18n>view2-title}" level="H1" class="sapUiSmallMarginBegin sapUiSmallMarginTop sapUiSmallMarginBottom myBold"/>
+			</items>
+		</FlexBox>
+		<semantic:content>
+			<!--<l:VerticalLayout class="monitor scan">-->
+			<!--<Image id="image2" width="{global>/_imagewidth}" class="image_center sapUiLargeMarginTop"/>-->
+			<!--</l:VerticalLayout>-->
+			<!--/////////////////////////////////////////////////////////////////////////////////////-->
+			<VBox id="FB1" width="100%" height="85%" class="fingerprint">
+				<FlexBox id="FB2" width="100%" height="100%" alignItems="Start" justifyContent="Center">
+					<items>
+						<!--<Image id="image2" width="{global>/_imagewidth}"/>-->
+						<!--<Image id="image2" densityAware="false" width="350px" height="450px"/>-->
+						<Image id="image3" densityAware="false" width="280px" height="380px" src="image/au1.png"/>
+						<!--<Image id="image3" densityAware="false" width="90%" src="image/au1.png"/>-->
+					</items>
+				</FlexBox>
+			</VBox>
+			<!--/////////////////////////////////////////////////////////////////////////////////////-->
+			<!--<core:Icon src="sap-icon://accept" size="350%" color="Success">-->
+			<!--	<core:layoutData>-->
+			<!--		<FlexItemData growFactor="1"/>-->
+			<!--	</core:layoutData>-->
+			<!--</core:Icon>		-->
+		</semantic:content>
+		<semantic:customFooterContent>
+			<HBox height="100%" width="100%">
+				<FlexBox width="100%" alignItems="Start" justifyContent="SpaceBetween">
+					<items>
+						<!--<Button type="Reject" text="{i18n>view2-back}" icon="sap-icon://navigation-left-arrow" press="onNavBack" visible="{global>/_w2_back}"/>-->
+						<!--<Button type="Accept" text="{i18n>view2-weiter}" icon="sap-icon://navigation-right-arrow" press="onNavToView3"-->
+						<!--	visible="{global>/_w2_validated}"/>-->
+						<Button type="Reject" text="{i18n>view2-back}" icon="sap-icon://navigation-left-arrow" press="onNavBack" visible="false"/>
+						<Button type="Accept" text="{i18n>view2-weiter}" icon="sap-icon://navigation-right-arrow" press="onNavToView3"
+							visible="false"/>
+					</items>
+				</FlexBox>
+			</HBox>
+		</semantic:customFooterContent>
+	</semantic:SemanticPage>
+</mvc:View>

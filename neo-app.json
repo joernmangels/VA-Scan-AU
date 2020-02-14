@@ -1,0 +1,46 @@
+{
+	"welcomeFile": "/webapp/index.html",
+	"routes": [{
+		"path": "/resources",
+		"target": {
+			"type": "service",
+			"name": "sapui5",
+			"entryPath": "/resources"
+		},
+		"description": "SAPUI5 Resources"
+	}, {
+		"path": "/test-resources",
+		"target": {
+			"type": "service",
+			"name": "sapui5",
+			"entryPath": "/test-resources"
+		},
+		"description": "SAPUI5 Test Resources"
+	}, {
+		"path": "/OCRV1",
+		"target": {
+			"type": "destination",
+			"name": "OCR",
+			"entryPath": "/api/v1.0/upload"
+		},
+		"description": "AU-OCR-SERVICE v1.0"
+	}, {
+		"path": "/OCRV2",
+		"target": {
+			"type": "destination",
+			"name": "OCR",
+			"entryPath": "/api/v2.0/upload"
+		},
+		"description": "AU-OCR-SERVICE v2.0"
+	},
+    {
+      "path": "/sap/opu/odata",
+      "target": {
+        "type": "destination",
+        "name": "s4h_webide",
+        "entryPath": "/sap/opu/odata"
+      },
+      "description": "Demo21-S4H-Backend"
+    }],
+	"sendWelcomeFileRedirect": true
+}

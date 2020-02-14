@@ -1,0 +1,1 @@
+sap.ui.define(function(){"use strict";var e={messagestrip_type:function(e,r){if(r){return"Warning"}else{if(e){return"Error"}else{return"Information"}}},uncertain_value:function(e){if(e){return"Wert evtl. nicht eindeutig!"}else{return"Joern"}},value_bool:function(e){if(e){return"Ja"}else{return"Nein"}}};return e},true);

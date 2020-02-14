@@ -1,0 +1,92 @@
+<core:FragmentDefinition class="sapUiSizeCompact" xmlns="sap.m" xmlns:l="sap.ui.layout" xmlns:f="sap.ui.layout.form"
+	xmlns:core="sap.ui.core">
+	<VBox id="vboxchange" class="sapUiSmallMargin" width="100%">
+		<!--***************************************************************************************************************************-->
+		<!--<l:VerticalLayout class="sapUiContentPadding" width="100%">-->
+		<l:VerticalLayout width="100%">
+			<l:content>
+				<!--<ObjectStatus class="sapMObjectStatusLarge myBold" title="{global>/_ocr_result/initial_certificate/text}" state="Success"/>-->
+				<ObjectStatus class="myBold" title="{global>/_ocr_result/initial_certificate/text}" state="Success"/>
+				<HBox>
+					<Switch id="initial_certificate" state="{global>/_ocr_result/initial_certificate/value}" customTextOn="{i18n>view3-ja}"
+						customTextOff="{i18n>view3-nein}"/>
+					<ObjectStatus class="sapUiSmallMarginBegin sapUiSmallMarginTop" text="{i18n>uncertain}" icon="sap-icon://status-critical" state="Warning"
+						visible="{global>/_ocr_result/initial_certificate/uncertain}"/>
+				</HBox>
+			</l:content>
+		</l:VerticalLayout>
+		<!--***************************************************************************************************************************-->
+		<l:VerticalLayout width="100%">
+			<l:content>
+				<ObjectStatus class="myBold" title="{global>/_ocr_result/renewed_certificate/text}" state="Success"/>
+				<HBox>
+					<Switch id="renewed_certificate" state="{global>/_ocr_result/renewed_certificate/value}" customTextOn="{i18n>view3-ja}"
+						customTextOff="{i18n>view3-nein}"/>
+					<ObjectStatus class="sapUiSmallMarginBegin sapUiSmallMarginTop" text="{i18n>uncertain}" icon="sap-icon://status-critical" state="Warning"
+						visible="{global>/_ocr_result/renewed_certificate/uncertain}"/>
+				</HBox>
+			</l:content>
+		</l:VerticalLayout>
+		<!--***************************************************************************************************************************-->
+		<l:VerticalLayout width="100%">
+			<l:content>
+				<ObjectStatus class="myBold" title="{global>/_ocr_result/workplace_accident/text}" state="Success"/>
+				<HBox>
+					<Switch id="workplace_accident" state="{global>/_ocr_result/workplace_accident/value}" customTextOn="{i18n>view3-ja}"
+						customTextOff="{i18n>view3-nein}"/>
+					<ObjectStatus class="sapUiSmallMarginBegin sapUiSmallMarginTop" text="{i18n>uncertain}" icon="sap-icon://status-critical" state="Warning"
+						visible="{global>/_ocr_result/workplace_accident/uncertain}"/>
+				</HBox>
+			</l:content>
+		</l:VerticalLayout>
+		<!--***************************************************************************************************************************-->
+		<l:VerticalLayout width="100%">
+			<l:content>
+				<ObjectStatus class="myBold" title="{global>/_ocr_result/doctor_assigned/text}" state="Success"/>
+				<HBox>
+					<Switch id="doctor_assigned" state="{global>/_ocr_result/doctor_assigned/value}" customTextOn="{i18n>view3-ja}"
+						customTextOff="{i18n>view3-nein}"/>
+					<ObjectStatus class="sapUiSmallMarginBegin sapUiSmallMarginTop" text="{i18n>uncertain}" icon="sap-icon://status-critical" state="Warning"
+						visible="{global>/_ocr_result/doctor_assigned/uncertain}"/>
+				</HBox>
+			</l:content>
+		</l:VerticalLayout>
+		<!--***************************************************************************************************************************-->
+		<l:VerticalLayout width="100%">
+			<l:content>
+				<ObjectStatus class="myBold" title="{global>/_ocr_result/incapacity_from/text}" state="Success"/>
+				<HBox>
+					<DatePicker id="incapacity_from" value="{global>/_ocr_result/incapacity_from/value}" valueFormat="yyyy-MM-dd" displayFormat="long"
+						change="handleChange" class="sapUiSmallMarginBottom"/>
+					<ObjectStatus class="sapUiSmallMarginBegin sapUiSmallMarginTop" text="{i18n>uncertain}" icon="sap-icon://status-critical" state="Warning"
+						visible="{global>/_ocr_result/incapacity_from/uncertain}"/>
+				</HBox>
+			</l:content>
+		</l:VerticalLayout>
+		<!--***************************************************************************************************************************-->
+		<l:VerticalLayout width="100%">
+			<l:content>
+				<ObjectStatus class="myBold" title="{global>/_ocr_result/incapacity_to/text}" state="Success"/>
+				<HBox>
+					<DatePicker id="incapacity_to" value="{global>/_ocr_result/incapacity_to/value}" valueFormat="yyyy-MM-dd" displayFormat="long"
+						change="handleChange" class="sapUiSmallMarginBottom"/>
+					<ObjectStatus class="sapUiSmallMarginBegin sapUiSmallMarginTop" text="{i18n>uncertain}" icon="sap-icon://status-critical" state="Warning"
+						visible="{global>/_ocr_result/incapacity_to/uncertain}"/>
+				</HBox>
+			</l:content>
+		</l:VerticalLayout>
+		<!--***************************************************************************************************************************-->
+		<l:VerticalLayout width="100%">
+			<l:content>
+				<ObjectStatus class="myBold" title="{global>/_ocr_result/incapacity_noticed/text}" state="Success"/>
+				<HBox>
+					<DatePicker id="incapacity_noticed" value="{global>/_ocr_result/incapacity_noticed/value}" valueFormat="yyyy-MM-dd"
+						displayFormat="long" change="handleChange" class="sapUiSmallMarginBottom"/>
+					<ObjectStatus class="sapUiSmallMarginBegin sapUiSmallMarginTop" text="{i18n>uncertain}" icon="sap-icon://status-critical" state="Warning"
+						visible="{global>/_ocr_result/incapacity_noticed/uncertain}"/>
+				</HBox>
+			</l:content>
+		</l:VerticalLayout>
+		<!--***************************************************************************************************************************-->
+	</VBox>
+</core:FragmentDefinition>

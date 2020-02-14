@@ -1,0 +1,35 @@
+<mvc:View controllerName="de.varelmann.varelmann_scan_au.controller.View1" xmlns:mvc="sap.ui.core.mvc" xmlns:l="sap.ui.layout" displayBlock="true"
+	xmlns="sap.m" xmlns:u="sap.ui.unified" xmlns:semantic="sap.m.semantic">
+	<semantic:SemanticPage id="V1" showNavButton="false" title="{i18n>appTitle}" floatingFooter="false" showFooter="true">
+		<semantic:content>
+			<FlexBox width="100%" height="5%" alignItems="Center" justifyContent="Center">
+				<items>
+					<Title text="{i18n>view1-title}" level="H1" class="sapUiSmallMarginTop sapUiSmallMarginButtom myBold"/>
+				</items>
+			</FlexBox>
+			<FlexBox width="100%" height="20%" alignItems="Start" justifyContent="Center">
+				<items>
+					<u:FileUploader id="fileUploader1" buttonText="{i18n>view1-ButtonCamera}" iconOnly="false" multiple="false" buttonOnly="true" visible="true"
+						icon="sap-icon://add-photo" uploadOnChange="false" sendXHR="false" useMultipart="true" fileType="JPG,JPEG,jpeg,jpg,PNG,png"
+						sameFilenameAllowed="true" width="100%" uploadComplete="handleUploadComplete" change="onChangeCamera"  class="sapUiSmallMarginTop sapUiSmallMarginButtom"/>
+				</items>
+			</FlexBox>
+			<!--/////////////////////////////////////////////////////////////////////////////////////-->
+			<FlexBox width="100%" height="75%" alignItems="Center" justifyContent="Center">
+				<items>
+					<!--<Image id="image1" width="{global>/_imagewidth}"/>-->
+					<!--<Image press="onPressImage" id="image1" densityAware="false" width="350px" height="450px"/>-->
+					<Image id="image1" densityAware="false" width="280px" height="380px"/>
+					<!--<Image id="image1" densityAware="false" width="60%"/>-->
+				</items>
+			</FlexBox>
+		</semantic:content>
+		<semantic:customFooterContent>
+			<!--<Button type="Accept" text="{i18n>view1-upload}" icon="sap-icon://upload-to-cloud" press="onNavToView1" visible="{global>/_w1_validated}"/>-->
+			<Button type="Accept" text="{i18n>view1-upload}" icon="sap-icon://upload-to-cloud" press="onNavToView1" enabled="{global>/_w1_validated}"/>
+		</semantic:customFooterContent>
+		<!--<semantic:messagesIndicator>-->
+		<!--<semantic:MessagesIndicator press="onMessagePopoverPress"/>-->
+		<!--</semantic:messagesIndicator>-->
+	</semantic:SemanticPage>
+</mvc:View>
